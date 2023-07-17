@@ -1,13 +1,85 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Export Corporation</title>
+    <title>Export Corporation</title>
+    <meta charset="utf-8">
 </head>
 <body>
+<style type="text/css">
+body {
+    font-family: Arial;
+    background-size: cover;
+}
+#mainmenu {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    background-color: #29abe2; 
+    text-align: center;
+    width: 100%;
 
-<h1>Vitajte</h1>
-<p>Vitajte na oficiálnej stránke Export Corporation!</p>
-<p>Web práve presúvame, každu chvíľu ho zverejníme.</p>
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+}
 
+#mainmenu img{
+    position: absolute;
+    margin-top: -0.6%;
+    margin-left: -3%;
+
+    height: 55px;
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+#mainmenu button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-left: 15px;
+    padding: 5px;
+    font-size: 19px;
+}
+
+#mainmenu button:hover{
+    cursor: pointer;
+    text-shadow: 0 0 10px white;
+}
+
+#body {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+
+</style>
+<div id="mainmenu"<><img src="exportlogoNoText.png">
+    <button onclick="mainPage()">Export Corporation</button>
+
+    <button onclick="oFirme()">O nás</button>
+    <button onclick="mainPage()">Login</button>
+</div>
+<div id="body"></div>
+<!--footer>Export Corporation - tel.</footer-->
+
+<script type="text/javascript">
+var mainPg = "<style>body {background: url('exportcorpBg.png');}</style>";
+
+document.getElementById("body").innerHTML = mainPg;
+function mainPage() {
+    document.getElementById("body").innerHTML = mainPg;
+}
+function oFirme() {
+   // document.getElementById("body").innerHTML = aboutFirma;
+}
+function prihlaska() {
+   // document.getElementById("body").innerHTML = prihlaskadofirmy;
+}
+
+</script>
 </body>
 </html>
